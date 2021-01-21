@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import moment from 'moment';
+import './Admin.css';
 
 
 function Admin() {
@@ -42,7 +44,7 @@ function Admin() {
                 {orders.map((order, index) =>
                     <tr key={index}>
                         <td>{order.customer_name}</td>
-                        <td>{order.time}</td>
+                        <td>{moment(order.time).format('MMMM Do YYYY, h:mm:ss a')}</td>
                         <td>{order.type}</td>
                         <td>{order.total}</td>
                     </tr>
