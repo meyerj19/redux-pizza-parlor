@@ -20,7 +20,7 @@ function App() {
         <p>Pizza is great.</p>
         {/* <Route path='/' component={Menu}/> */}
         {/* <Route path='/checkout' component={Checkout}/> */}
-        {/* <Route path='/customerForm' component={CustomerForm}/> */}
+        <Route path='/customerForm' component={CustomerForm}/>
         {/* <Route path='/admin' component={Admin}/> */}
 
       </div>
