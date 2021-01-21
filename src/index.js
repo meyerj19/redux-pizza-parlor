@@ -14,7 +14,14 @@ const orderReducer = (state = [], action) => {
 
 //storing customer information, expects object in payload
 const customerReducer = (state = {}, action) =>{
-    return state
+    switch (action.type) {
+      case 'SET_CUSTOMER_INFO':
+        return action.payload;
+      case 'RESET_CUSTOMER_INFO':
+        return state = {};
+      default:
+        return state;
+    }
 }
 
 const reduxStore = createStore(
