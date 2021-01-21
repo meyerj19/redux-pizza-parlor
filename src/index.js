@@ -24,10 +24,20 @@ const customerReducer = (state = {}, action) =>{
     }
 }
 
+const orderHistoryReducer = (state = [], action) => {
+  switch(action.type) {
+    case 'SET_ORDERS':
+      return action.payload;
+    default:
+      return state;
+  }
+}
+
 const reduxStore = createStore(
     combineReducers({
       orderReducer,
-      customerReducer
+      customerReducer,
+      orderHistoryReducer
     }),
     applyMiddleware(logger)
   );
