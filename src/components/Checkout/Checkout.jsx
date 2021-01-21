@@ -8,6 +8,14 @@ export default function Checkout() {
     const orderReducer = useSelector(store => store.orderReducer)
     const customerReducer = useSelector(store => store.customerReducer)
 
+    const calculateTotal = (pizzaArray) => {
+        let sum = 0;
+        pizzaArray.map((pizza) => {
+            sum += Number(pizza.price)
+        })
+        return sum;
+    }
+
     const handleClick = (customer, order) => {
         console.log('clicked')
         const newOrder = {
@@ -16,8 +24,8 @@ export default function Checkout() {
             city: customer.city,
             zip: customer.zip,
             type: customer.type,
-            // total: order -> subtotal from a different component?
-            // pizzas: order -> array of objects?
+            total: calculateTotal(order),
+            pizzas: '',
         }
         console.log(newOrder)
         axios({
@@ -74,10 +82,3 @@ export default function Checkout() {
         </>
     )
 }
-// customer_name,
-//             street_address,
-//             city,
-//             zip,
-//             type,
-//             total,
-//             pizzas
