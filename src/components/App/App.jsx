@@ -1,5 +1,9 @@
 import React from 'react';
 import axios from 'axios';
+import Menu from '../Menu/Menu';
+import Checkout from '../Checkout/Checkout';
+import CustomerForm from '../CustomerForm/CustomerForm';
+import Admin from '../Admin/Admin';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 
@@ -14,6 +18,10 @@ function App() {
 
         <img src='images/pizza_photo.png' />
         <p>Pizza is great.</p>
+        <Route path='/' component={Menu}/>
+        <Route path='/checkout' component={Checkout}/>
+        <Route path='/customerForm' component={CustomerForm}/>
+        <Route path='/admin' component={Admin}/>
 
       </div>
     </Router>
