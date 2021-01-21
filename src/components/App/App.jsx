@@ -21,7 +21,7 @@ function App() {
         {/* <Route path='/' component={Menu}/> */}
         {/* <Route path='/checkout' component={Checkout}/> */}
         <Route path='/customerForm' component={CustomerForm}/>
-        {/* <Route path='/admin' component={Admin}/> */}
+        <Route path='/admin' component={Admin}/>
 
       </div>
     </Router>
