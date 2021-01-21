@@ -15,6 +15,13 @@ export default function Checkout() {
         })
         return sum;
     }
+    const boxUpPizzas = (pizzaArray) => {
+        let serverPizza = []
+        pizzaArray.map((pizza) => {
+            serverPizza.push({id: pizza.id, quantity: 1})
+        })
+        return serverPizza
+    }
 
     const handleClick = (customer, order) => {
         console.log('clicked')
@@ -25,7 +32,7 @@ export default function Checkout() {
             zip: customer.zip,
             type: customer.type,
             total: calculateTotal(order),
-            pizzas: '',
+            pizzas: boxUpPizzas(order),
         }
         console.log(newOrder)
         axios({
