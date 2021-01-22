@@ -9,6 +9,9 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 
 //reducer to hold pizza order, expects array in payload
 const orderReducer = (state = [], action) => {
+    if(action.type === 'GET_CART'){
+      return state = action.payload;
+    }
     return state;
 }
 
