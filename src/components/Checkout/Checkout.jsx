@@ -76,9 +76,9 @@ export default function Checkout() {
                     <tbody>
                         {orderReducer.map(order => {
                             return (
-                                <tr key={order.total}>
-                                    <td>{order.pizzas}</td>
-                                    <td>{order.total}</td>
+                                <tr key={order.id}>
+                                    <td>{order.name}</td>
+                                    <td>{order.price}</td>
                                 </tr>
                             )
                         })}
