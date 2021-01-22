@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux'
 import Subtotal from '../Subtotal/Subtotal'
+import './Checkout.css'
 
 export default function Checkout() {
     const history = useHistory()
@@ -74,11 +75,11 @@ export default function Checkout() {
                         </tr>
                     </thead>
                     <tbody>
-                        {orderReducer.map(order => {
+                        {orderReducer.map(pizza => {
                             return (
-                                <tr key={order.id}>
-                                    <td>{order.name}</td>
-                                    <td>{order.price}</td>
+                                <tr key={pizza.id}>
+                                    <td>{pizza.name}</td>
+                                    <td>{pizza.price}</td>
                                 </tr>
                             )
                         })}
