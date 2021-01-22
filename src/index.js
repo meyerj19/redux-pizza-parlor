@@ -9,11 +9,25 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 
 //reducer to hold pizza order, expects array in payload
 const orderReducer = (state = [], action) => {
+
+
+
     if(action.type === 'GET_CART'){
       return state = action.payload;
     }
+
     return state;
 }
+
+const getPizza = (state = [], action) => {
+    switch(action.type) {
+      case 'GET_PIZZA':
+        return action.payload;
+        default: return state;
+    }
+  
+}
+
 
 //storing customer information, expects object in payload
 const customerReducer = (state = {}, action) =>{
@@ -40,6 +54,7 @@ const reduxStore = createStore(
     combineReducers({
       orderReducer,
       customerReducer,
+      getPizza,
       orderHistoryReducer
     }),
     applyMiddleware(logger)
