@@ -20,11 +20,11 @@ function App() {
 
         <img src='images/pizza_photo.png' />
         <p>Pizza is great.</p>
-        <Route path='/' component={Menu}/>
+        <Route path='/' exact component={Menu}/>
 
-        <Route path='/customerForm' component={CustomerForm} />
-        <Route path='/admin' component={Admin} />
-        <Route path='/checkout' component={Checkout}></Route>
+        <Route path='/customerForm' exact component={CustomerForm} />
+        <Route path='/admin' exact component={Admin} />
+        <Route path='/checkout' exact component={Checkout}></Route>
 
       </div>
     </Router>

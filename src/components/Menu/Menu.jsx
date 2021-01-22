@@ -26,7 +26,7 @@ function Menu() {
 //sending the cart information to redux
     const handleNext = () => {
         dispatch({type: 'GET_CART', payload: cart})
-        history.push('/checkout');
+        history.push('/customerForm');
     }
 
 //calling the fetchPizza function
