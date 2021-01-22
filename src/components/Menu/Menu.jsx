@@ -28,7 +28,7 @@ function Menu() {
         dispatch({type: 'GET_CART', payload: cart})
         history.push('/checkout');
     }
-    
+
 //calling the fetchPizza function
     useEffect(() => {
         fetchPizza();
@@ -53,7 +53,7 @@ function Menu() {
     const orderSum = 0;
 
     console.log('pizza', pizzas);
-    //setting up DOM    
+    //setting up DOM
     return (
         <section>
             <h1>Prime Pizza</h1>
@@ -65,7 +65,7 @@ function Menu() {
                 {pizzas.map((pizza, index) =>
                     <li key={index}>
                         <button onClick={() => handleClick(pizza)}>Add</button>
-                        {pizza.name}, <img src={pizza.image_path}></img>/>, {pizza.description}, {pizza.price}</li>
+                        {pizza.name}, <img src={pizza.image_path}></img>, {pizza.description}, {pizza.price}</li>
                 )}
             </ul>
             <button onClick={() => handleNext()}>Next</button>
