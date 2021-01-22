@@ -16,12 +16,15 @@ function App() {
           <h1 className='App-title'>Prime Pizza</h1>
         </header>
 
-        <img src='images/pizza_photo.png' />
-        <p>Pizza is great.</p>
-        <Route path='/' component={Menu}/>
-        <Route path='/checkout' component={Checkout}/>
-        <Route path='/customerForm' component={CustomerForm}/>
-        <Route path='/admin' component={Admin}/>
+
+
+        {/* <img src='images/pizza_photo.png' />
+        <p>Pizza is great.</p> */}
+        {/* <Route path='/' component={Menu}/> */}
+
+        <Route path='/customerForm' component={CustomerForm} />
+        <Route path='/admin' component={Admin} /> */
+        <Route path='/checkout' component={Checkout}></Route>
 
       </div>
     </Router>
